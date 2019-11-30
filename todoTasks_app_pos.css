@@ -1,0 +1,59 @@
+header {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-areas: 
+        "title statistics date";
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "todoTasks finishedTasks";
+}
+
+.task {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "taskText taskText"
+        "finishedButton removeButton";
+}
+
+div p {
+    grid-area: taskText;
+}
+
+div button#finishedButton {
+    grid-area: finishedButton;
+}
+
+div button#removeButton {
+    grid-area: removeButton;
+}
+
+h1 {
+    grid-area: title;
+}
+
+article#date {
+    grid-area: date;
+    text-align: center;
+}
+
+article#statistics {
+    grid-area: statistics;
+    text-align: center;
+}
+
+section#todoTasks {
+    grid-area: todoTasks;
+}
+
+section#finishedTasks {
+    grid-area: finishedTasks;
+}
+
+h2 {
+    text-align: center;
+}

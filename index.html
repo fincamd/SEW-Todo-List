@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="todoTasks_app.js"></script>
+    <link rel="stylesheet" href="todoTasks_app_pos.css">
+    <link rel="stylesheet" href="todoTasks_app_style.css">
+    <title>Lista de tareas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lista de tareas</h1>
+        <article>
+            <h2>Estadísticas</h2>
+            <div id="statistics">
+                <p>
+                    Total de tareas: 0<br>
+                    Tareas sin terminar: 0<br>
+                    Tareas acabadas: 0<br>
+                    Porcentaje de tareas terminadas: 0%
+                </p>
+            </div>
+        </article>
+        <article id="date">
+            <h2>Fecha de hoy:</h2>
+            <p>
+                <script src="get_todays_date.js"></script>
+            </p>
+        </article>
+    </header>
+    <main>
+        <section id="todoTasks" title="Todo">
+            <h2>
+                Tareas por hacer <br>
+                <input id="newTaskInput" type="text" placeholder="Escribe aquí el texto para la nueva tarea">
+                <button type="button" onclick="taskBoard.createNewTask()">Añadir</button>
+            </h2>
+            <div id="todoTaskList">
+            </div>
+        </section>
+        <section id="finishedTasks" title="Finished">
+            <h2>Tareas acabadas</h2>
+            <div id="finishedTaskList">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
